@@ -1,0 +1,3 @@
+{
+  "extends": "@voice-agent/config/tsconfig.base.json"
+}
