@@ -2,11 +2,12 @@ import { createEnv } from "@t3-oss/env-core";
 import { z } from "zod";
 
 export const env = createEnv({
-  clientPrefix: "VITE_",
-  client: {
-    VITE_SERVER_URL: z.url(),
-    VITE_WS_URL: z.string().url(),
-  },
-  runtimeEnv: (import.meta as any).env,
-  emptyStringAsUndefined: true,
+	clientPrefix: "VITE_",
+	client: {
+		VITE_SERVER_URL: z.url(),
+		VITE_WS_URL: z.string().url(),
+	},
+	// biome-ignore lint/suspicious/noExplicitAny: Vite's import.meta is not fully typed
+	runtimeEnv: (import.meta as any).env,
+	emptyStringAsUndefined: true,
 });

@@ -1,24 +1,24 @@
 {
-  "name": "@voice-agent/auth",
-  "type": "module",
-  "exports": {
-    ".": {
-      "default": "./src/index.ts"
-    },
-    "./*": {
-      "default": "./src/*.ts"
-    }
-  },
-  "scripts": {},
-  "dependencies": {
-    "@voice-agent/db": "workspace:*",
-    "@voice-agent/env": "workspace:*",
-    "better-auth": "catalog:",
-    "dotenv": "catalog:",
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@voice-agent/config": "workspace:*",
-    "typescript": "catalog:"
-  }
+	"name": "@voice-agent/auth",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {},
+	"dependencies": {
+		"@voice-agent/db": "workspace:*",
+		"@voice-agent/env": "workspace:*",
+		"better-auth": "catalog:",
+		"dotenv": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@voice-agent/config": "workspace:*",
+		"typescript": "catalog:"
+	}
 }
