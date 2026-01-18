@@ -1,0 +1,17 @@
+model VoiceSession {
+  id             String    @id @default(cuid())
+  userId         String
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessionToken   String    @unique
+  status         String    @default("active")
+  conversationId String?
+  metadata       Json?
+  startedAt      DateTime  @default(now())
+  endedAt        DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([userId])
+  @@index([sessionToken])
+  @@map("voice_session")
+}
